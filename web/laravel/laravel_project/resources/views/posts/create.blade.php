@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container ml-4">
-        <form action="{{ route('posts.store') }}" method="POST" class="form-horizontal" onsubmit="event.preventDefault();valueCheck();">
+        <form action="{{ route('posts.store') }}" method="POST" class="form-horizontal" onsubmit="return valueCheck();">
             @csrf
             <h1 class="text-#696969">新規投稿</h1>
             <div class="form-group">

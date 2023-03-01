@@ -36,17 +36,18 @@ class PostController extends Controller
             'body' => $body,
             'user_id' => $user_id,
         ];
+        
         $this->validate($request,$validate_rules);
         Post::create($params);
 
-        return redirect()->route('top')->with('successMessage', '“o˜^‚É¬Œ÷‚µ‚Ü‚µ‚½B');
+        return redirect()->route('top')->with('successMessage', 'ç™»éŒ²ã«æˆåŠŸã—ã¾ã—ãŸã€‚');
     }
 
     public function destroy($post_id)
     {
         Post::where('id', $post_id)->delete();
 
-        return redirect()->route('top')->with('deleteMessage', 'íœ‚µ‚Ü‚µ‚½');
+        return redirect()->route('top')->with('deleteMessage', 'æŠ•ç¨¿ã‚’å‰Šé™¤ã—ã¾ã—ãŸ');
     }
 
     public function show($post_id)
