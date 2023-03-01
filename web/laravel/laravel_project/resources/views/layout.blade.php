@@ -39,7 +39,7 @@
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li><a class="dropdown-item" href="/users/{{ Auth::user()->id }}">プロフィール</a></li>
-                            <li><a class="dropdown-item border-bottom" href="#">パスワードの変更</a></li>
+                            <li><a class="dropdown-item border-bottom" href="{{ route('password.confirm') }}">パスワードの変更</a></li>
                             <li> <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
